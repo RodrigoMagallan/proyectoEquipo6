@@ -1,33 +1,31 @@
-const app = document.getElementsByTagName("app")
-const input = document.createElement('input')
-const button = document.createElement('button')
-const header = document.createElement('h2')
+const app = document.getElementsByTagName("app");
+const input = document.createElement('input');
+const button = document.createElement('button');
+const header = document.createElement('h2');
 
-console.log(app)
+console.log(app);
 
-header.type = 'h2'
-header.innerHTML = 'ToDo APP'
-document.body.appendChild(header)
+//Creación de header h2
+header.type = 'h2';
+header.innerHTML = 'ToDo APP';
+document.body.appendChild(header);
 
-input.type = 'input'
-input.setAttribute("placeholder", "Escribe aqui tu tarea")
-document.body.appendChild(input)
+//Creación de input con placeholde
+input.type = 'input';
+input.setAttribute("placeholder", "Escribe aqui tu tarea");
+input.setAttribute('id','inputTask');
+document.body.appendChild(input);
+
+//Creación de botón
+button.type = 'button';
+button.innerText='Añadir Tarea';
+button.setAttribute('id','btnSave');
+document.body.appendChild(button);
 
 
-button.type = 'button'
-button.innerText='Añadir Tarea'
-document.body.appendChild(button)
 
 
-$("button").addEventListener("click", function(){ //Listener al evento del botón
-    let input = document.createElement('input') 
 
-    console.log('input')
-})
-
-function $(selector){
-    return document.querySelector(selector); //Selececionar tupo Jquery
-}
 var row = document.createElement("tr");
 
 
@@ -35,7 +33,7 @@ function buildTableTasks(){
     var table = document.createElement("table");
     var tableBody = document.createElement("tbody");
     table.appendChild(tableBody);
-    document.getElementById("listTask")
+    document.getElementById("app")
     .appendChild(table);
 }
 
