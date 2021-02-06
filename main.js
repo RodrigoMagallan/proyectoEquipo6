@@ -1,34 +1,18 @@
-const formulario = document.getElementById('formulario')
-const input = document.getElementById('input')
-const listaTareas = document.getElementById('listaTareas')
-const template = document.getElementById('template').content
-//agrupar fragment porque son volatiles 
-const fragment = document.createDocumentFragment()
-let tareas = { //colección de objectos, para hacer mas rapido el poder obtener un elemento.
-    1 : {
-        id : 1,
-        text: 'Tarea #1',
-        estado: false
-    }, 
-    2 :{
-        id : 2,
-        text : 'Tarea #2',
-        estado: false
-    }
-}
+const app = document.getElementsByTagName("app")
+const input = document.createElement('input')
+const button = document.createElement('button')
+const header = document.createElement('h2')
 
-formulario.addEventListener('submit', e => {
-    e.preventDefault()
-    //console.log(e.target[0].value)
-    setTarea(e)
-})
+console.log(app)
 
-const setTarea = e => {
-    if(input.value.trim() === ''){
-        console.log('esta vacío')
-        return
-    }
-    console.log('diste clic')
+header.type = 'h2'
+header.innerHTML = 'ToDo APP'
+document.body.appendChild(header)
 
-    formulario.reset()
-}
+input.type = 'input'
+input.innerText='¿Que tarea quieres agregar?'
+document.body.appendChild(input)
+
+button.type = 'button'
+button.innerText='Añadir Tarea'
+document.body.appendChild(button)
