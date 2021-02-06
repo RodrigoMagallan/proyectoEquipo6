@@ -19,12 +19,3 @@ button.innerText='Añadir Tarea'
 document.body.appendChild(button)
 
 
-$("button").addEventListener("click", function(){ //Listener al evento del botón
-    let input = document.createElement('input') 
-
-    console.log('input')
-})
-
-function $(selector){
-    return document.querySelector(selector); //Selececionar tupo Jquery
-}
