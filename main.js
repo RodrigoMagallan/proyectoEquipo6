@@ -41,8 +41,6 @@ function buildTableTasks(){
 
 window.onload =  buildTableTasks();
 
-
-
 //Variables globaless 
 var btnSave = document.getElementById("btnSave");
 var task = "";
