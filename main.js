@@ -43,7 +43,7 @@ window.onload =  buildTableTasks();
 
 
 
-//Variables globales
+//Variables globaless 
 var btnSave = document.getElementById("btnSave");
 var task = "";
 var tasksArr = [];
