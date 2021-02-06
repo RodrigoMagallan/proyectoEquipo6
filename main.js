@@ -1,42 +1,41 @@
-const app = document.getElementsByTagName("app");
+var app = document.getElementById("app");
 const input = document.createElement('input');
 const button = document.createElement('button');
 const header = document.createElement('h2');
 
-console.log(app);
-
 //Creación de header h2
 header.type = 'h2';
 header.innerHTML = 'ToDo APP';
-document.body.appendChild(header);
+app.appendChild(header);
 
 //Creación de input con placeholde
 input.type = 'input';
 input.setAttribute("placeholder", "Escribe aqui tu tarea");
 input.setAttribute('id','inputTask');
-document.body.appendChild(input);
+app.appendChild(input);
 
 //Creación de botón
 button.type = 'button';
 button.innerText='Añadir Tarea';
 button.setAttribute('id','btnSave');
-document.body.appendChild(button);
+app.appendChild(button);
 
 
 
 
 
-var row = document.createElement("tr");
+//Crea el elemento tbody
+var tableBody = document.createElement("tbody");
 
-
+//Construye la tabla
 function buildTableTasks(){
     var table = document.createElement("table");
-    var tableBody = document.createElement("tbody");
     table.appendChild(tableBody);
     document.getElementById("app")
     .appendChild(table);
 }
 
+//Setea la tabla al cargar la página
 window.onload =  buildTableTasks();
 
 //Variables globaless 
@@ -47,10 +46,22 @@ var tasksArr = [];
 
 //Función del botón guardar
 btnSave.addEventListener('click',function(event){
-    task = { tasks: document.getElementById('inputTask').value};
+    task =  document.getElementById('inputTask').value;
     tasksArr.push(task);
     console.log(tasksArr);
     document.getElementById('inputTask').value = "";
+
+    var row = document.createElement("tr");
+    var col = document. createElement("td");
+
+    
+
+        col.appendChild(document.createTextNode(task));
+        row.appendChild(col);
+
+
+    tableBody.appendChild(row);
+
 });
 
 
