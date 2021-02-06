@@ -11,22 +11,16 @@
 
     <div id="app" class="container ">
         <h1 class="text-center my-5">ToDo APP</h1>
-        <form id="formulario">
-            <input type="text" placeholder="Ingrese Tarea" class="form-control my-2" id="input">
-            <button class="btn btn-primary " type="submit">Agregar</button>
-        </form>
-        <div id="listaTareas" class="mt-3 ">
+        <div id="formulario">
+            <input type="text" placeholder="Ingrese Tarea" class="form-control my-2" id="inputTask">
+            <button class="btn btn-primary" id="btnSave">Agregar</button>
         </div>
+        <div id="listTask">
+
+        </div>
+
     </div>
-    <template id="template">
-        <div class="alert alert-warning d-flex justify-content-between align-items-center"> 
-            <P class="m-0">Tarea #1</P>
-            <h3 class="m-0">
-                <i class="fas fa-check-circle text-success"></i>
-                <i class="fas fa-minus-circle text-danger"></i>
-            </h3>
-        </div>  
-    </template>
+
 
     <script src="main.js"></script>
   </body>
