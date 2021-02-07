@@ -10,18 +10,15 @@ app.appendChild(header);
 
 //Creación de input con placeholde
 input.type = 'input';
-input.setAttribute("placeholder", "Escribe aqui tu tarea");
+input.setAttribute("placeholder", "Writte a task here");
 input.setAttribute('id','inputTask');
 app.appendChild(input);
 
 //Creación de botón
 button.type = 'button';
-button.innerText='Añadir Tarea';
+button.innerText='Add a task';
 button.setAttribute('id','btnSave');
 app.appendChild(button);
-
-
-
 
 
 //Crea el elemento tbody
@@ -30,6 +27,7 @@ var tableBody = document.createElement("tbody");
 //Construye la tabla
 function buildTableTasks(){
     var table = document.createElement("table");
+    table.setAttribute('id','tableTask');
     table.appendChild(tableBody);
     document.getElementById("app")
     .appendChild(table);
@@ -46,23 +44,32 @@ var tasksArr = [];
 
 //Función del botón guardar
 btnSave.addEventListener('click',function(event){
+
+if(document.getElementById('inputTask').value == ""){
+    window.alert("No se puede agregar un registro vacio");
+}else{
     task =  document.getElementById('inputTask').value;
     tasksArr.push(task);
     console.log(tasksArr);
-    document.getElementById('inputTask').value = "";
-
     var row = document.createElement("tr");
-    var col = document. createElement("td");
-
-    
-
+    var col = document.createElement("td");
+    var btnDelete = document.createElement("button");
+    btnDelete.type = 'button';
+    btnDelete.setAttribute('id','btnDelete');
+    btnDelete.innerText= "Delete";
+    var checkTask = document.createElement("input");
+    checkTask.type = "checkbox";
+        col.appendChild(checkTask);
         col.appendChild(document.createTextNode(task));
+        col.appendChild(btnDelete);
         row.appendChild(col);
-
-
     tableBody.appendChild(row);
-
+    document.getElementById('inputTask').value = "";
+}
 });
 
+btnDelete.addEventListener('click',function (event) {
+    document.getElementById('tableTask').deleteRow(i);
+})
 
 
