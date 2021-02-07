@@ -20,7 +20,6 @@ button.innerText='Add a task';
 button.setAttribute('id','btnSave');
 app.appendChild(button);
 
-
 //Crea el elemento tbody
 var tableBody = document.createElement("tbody");
 
@@ -40,6 +39,7 @@ window.onload =  buildTableTasks();
 var btnSave = document.getElementById("btnSave");
 var task = "";
 var tasksArr = [];
+var btnDelete = document.getElementById("btnDelete");
 
 
 //Función del botón guardar
@@ -66,10 +66,12 @@ if(document.getElementById('inputTask').value == ""){
     tableBody.appendChild(row);
     document.getElementById('inputTask').value = "";
 }
-});
-
+//Funcionalidad del botón de eliminar
 btnDelete.addEventListener('click',function (event) {
+    var i = this.parentNode.parentNode.rowIndex; //Elimina la fila en la que se de click
     document.getElementById('tableTask').deleteRow(i);
-})
+ })
+ 
+});
 
 
