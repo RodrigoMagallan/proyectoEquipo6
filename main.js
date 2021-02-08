@@ -1,16 +1,17 @@
+//Declaraación de variables para  obtener y creaer elementos por medio del DOM
 var app = document.getElementById("app");
 const input = document.createElement('input');
 const button = document.createElement('button');
 const header = document.createElement('h1');
 
 
-//Creación de header h2
+//Creación de header h1
 header.type = 'h1';
 header.innerHTML = 'ToDo APP';
 header.setAttribute('class', 'title');
 app.appendChild(header);
 
-//Creación de input con placeholde
+//Creación de input con placeholder
 input.type = 'input';
 input.setAttribute("placeholder", "Writte a task here");
 input.setAttribute('id', 'inputTask');
@@ -52,6 +53,7 @@ btnSave.addEventListener('click', function (event) {
     } else {
         task = document.getElementById('inputTask').value;
         tasksArr.push(task);
+        //Variables locales
         var row = document.createElement("tr");
         var col = document.createElement("td");
         var colCheck = document.createElement("td");
