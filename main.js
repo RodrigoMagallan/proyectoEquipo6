@@ -13,7 +13,7 @@ app.appendChild(header);
 
 //Creación de input con placeholder
 input.type = 'input';
-input.setAttribute("placeholder", "Writte a task here");
+input.setAttribute("placeholder", "Write a task here");
 input.setAttribute('id', 'inputTask');
 app.appendChild(input);
 

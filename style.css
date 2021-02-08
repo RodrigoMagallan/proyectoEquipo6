@@ -65,10 +65,11 @@ body{
 #btnDelete:hover{
     background-color:gray;
 }
-
+/*estilo de linea de tachado de tarea hecha*/
 .checkList{
     text-decoration-line: line-through;
-    text-decoration-color: white;
+    text-decoration-style: wavy;
+    text-decoration-color: rgb(255, 0, 0);
 }
 
 p{
