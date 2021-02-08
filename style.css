@@ -1,0 +1,77 @@
+body{
+    display:flex;
+    background-color: #fafafa;
+    padding: 0 1rem;
+    margin: 1rem;
+    justify-content: center;
+   
+}
+
+#app{
+    margin:2rem;
+}
+
+.title{
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:50px;
+    margin-bottom:2rem;
+}
+
+#inputTask{
+    width: 300px;
+    height:25px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline:none;
+    margin-bottom: 25px;
+}
+
+#btnSave{
+    height:30px;
+    border-radius:15px;
+    color:#fafafa;
+    background-color:dodgerblue;
+    border:none;
+    outline: none;
+    font-weight:100;
+}
+
+#btnSave:hover{
+    background-color:gray;
+}
+
+.check{
+    margin-right: 25px;
+}
+
+#tableTask{
+    display: flex;
+    justify-content: center;
+}
+
+#btnDelete{
+    margin-inline-start: 50px;
+    height:30px;
+    border-radius:12px;
+    color:#fafafa;
+    background-color:red;
+    border:none;
+    outline: none;
+}
+
+#btnDelete:hover{
+    background-color:gray;
+}
+
+.checkList{
+    text-decoration-line: line-through;
+    text-decoration-color: white;
+}
+
+p{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:15px;
+    color:black;
+}
